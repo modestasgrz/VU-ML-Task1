@@ -11,11 +11,11 @@ input_vector = np.array([[-0.3, 0.6],
 label_vector = np.array([0, 0, 1, 1])
 
 # Initialization of a neuron
-neuron = Neuron(number_of_inputs = 2, activation="step")
+neuron = Neuron(number_of_inputs = 2, activation="sigmoid")
 
 # Training of a neuron
 # Needed to find appropriate values of weights
-neuron.train(epochs=20, learning_rate=3,
+neuron.train(epochs=20, learning_rate=30,
              training_data=input_vector,
              training_labels=label_vector)
 

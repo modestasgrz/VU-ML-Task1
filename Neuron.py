@@ -69,7 +69,7 @@ class Neuron(object):
 
     # Function that predicts outputs according to inputs using current weights' values
     def predict_outputs(self, input_data):
-        if len(input_data) != self.number_of_inputs:
+        if len(input_data[0]) != self.number_of_inputs:
             raise Exception("Number of input elements is not equal to specified number")
         # Adds additional bias column of ones to the input matrix
         input_data = np.c_[np.ones(len(input_data)), input_data]
