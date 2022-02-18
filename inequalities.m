@@ -16,9 +16,10 @@ function inequalities(theta)
 	condition4 = bias + 1.2*weight1 + 1.2*weight2 > 0;
 	
 	condition = condition1 & condition2 & condition3 & condition4;
-	scatter3(weight1(condition), weight2(condition), bias(condition), '.');
 	
-	colors = zeros(size(weight1)) + condition1 + condition2 + condition3 + condition4;
-	scatter3(weight1(:), weight2(:), bias(:), 3, colors(:), 'filled')
+	% colors = zeros(size(weight1)) + condition1 + condition2 + condition3 + condition4;
+	% scatter3(weight1(:), weight2(:), bias(:), 3, colors(:), 'filled')
 	
+	scatter3(weight1(condition), weight2(condition), bias(condition), 'b', 'filled')
+
 end
